@@ -1,0 +1,57 @@
+.player{
+    text-align: center;
+    color: blue;
+    font-weight: bolder;
+    font-style: inherit;
+    height: 150px;
+}
+.score{
+    padding: 10px 20px;
+    text-align: center;
+    color: darkblue;    
+    font-weight: bold;
+    font-style: initial;
+}
+.scoreReason{
+    text-align: center;
+    font-weight: bold;
+    color: royalblue;
+    height: 50px;
+    padding: 10px 20px;
+}
+.dropPoint{
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+.img{
+    width: 400px;
+    border: 2px;
+    text-align: center;
+}
+.probability{
+    text-align: left;
+    font-style: italic;
+    font-size: small;
+}
+.menu-local{
+    position: relative;
+}
+.expectedShotDropdown{
+    list-style: none;
+    display: none;
+    position: absolute;
+    padding: 0.2rem;
+    width: 14%;
+    background-color: rgb(232, 248, 246);
+    transition: all 0.8s ease;
+}
+.expectedShotDropdown > li:hover{
+    background-color: rgb(237, 241, 181);
+}
+.expectedShotDropdown.active{
+    display: block;
+}
+.hidden{
+    display: none;
+}
