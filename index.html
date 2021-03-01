@@ -1,0 +1,107 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="local.css">
+    <title>Document</title>
+</head>
+
+<body>
+  <table width="800" border="0">
+    <tr><td colspan="3">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb menu-local">
+          <li class="breadcrumb-item">
+            <a href="#">Home</a>
+          </li>
+          <li class="breadcrumb-item expectedShotArea">
+            <a href="#">Expected Shot Area
+              <ul class="expectedShotDropdown">
+                <li >Area 1</li>
+                <li >Area 2</li>
+                <li >Area 3</li>
+                <li >Area 4</li>
+                <li >Area 5</li>
+                <li >Area 6</li>
+                <li >Area 7</li>
+                <li >Area 8</li>
+                <li >Area 9</li>
+              </ul>
+            </a>
+          </li>
+          <li class="breadcrumb-item showProbabilities"><a href="#">Show Probabilities</a></li>
+        </ol>
+      </nav>
+    </td></tr>
+
+    <tr style="text-align: center;">
+      <td>
+        <button class="start btn btn-primary">Start</button>
+      </td>
+      <td>
+        <button class="agree hidden btn btn-primary">Agree</button>
+      </td>
+      <td></td>
+    </tr>
+
+    <tr>
+      <td width="150">
+        <div class="usera player hidden">PlayerA</div>
+        <div class="userb player hidden">PlayerB</div>
+        <div class="scoreA score"></div>
+        <div class="scoreB score"></div>
+        <div class="scoreReason"></div>
+        <div class="dropPoint"></div>
+      </td>
+      <td class="img">
+        <!-- <img src="img/court.bmp" width=384 height=512> -->
+        <img class="top" src="img/top.bmp" width=384 height=256>
+        <img class="bot" src="img/bot.bmp" width=384 height=256>
+      </td>
+      <td>
+        <ul class="probability"></ul>
+      </td>
+    </tr>
+
+    <tr style="text-align: center;">
+      <td colspan="3">
+        <button class="hit btn btn-success btn-sm my-2">hit</button>
+        <br>
+        <button class="hit-back hidden btn btn-success btn-sm my-2">hit-back</button>
+      </td>
+    </tr>
+  </table>
+  
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-firestore.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-analytics.js"></script> -->
+
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyCe4NfLLjbYbcnFYTLEjlsB5jID0r1aoyA",
+      authDomain: "badminton-e2021.firebaseapp.com",
+      databaseURL: "https://badminton-e2021-default-rtdb.firebaseio.com",
+      projectId: "badminton-e2021",
+      storageBucket: "badminton-e2021.appspot.com",
+      messagingSenderId: "267933148582",
+      appId: "1:267933148582:web:bd441c5defc9ad583a5b67",
+      measurementId: "G-BKNQ1QJ3GT"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+  </script>
+
+  <script src="realtime.js"></script>
+  <script src="fb.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
